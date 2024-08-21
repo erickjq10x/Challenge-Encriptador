@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #EFF1FA;
+}
+
+.header{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+}
+.header__logo{
+    height:48px;
+    width: auto;
+    padding: 0 20px;
+    align-self  : center;
+}
+.container{
+    display: flex;
+    height: 75vh;
+    width: 100%;
+}
+.container__input{
+    width: 50vw;
+    height: 100%;
+}
+.container__input--textarea{
+    margin-left: 13rem;
+    background: transparent;
+    resize: none;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.container__input--textarea::placeholder{
+    color: #0A3871;
+}
+.container__input--textarea:focus{
+    outline: none;
+}
+.container__input--p{
+    font-weight: 400;
+    font-size: 0.75em;
+    line-height: 150%;
+    color: #495057;
+    margin-left: 13rem;
+}
+.container__input--p::before{
+    content: url(/Img/bi_exclamation-circle-fill.png);
+    margin-right: 0.5em;
+}
+.container__input--buttons{
+    display: flex;
+    margin-left: 13rem;
+    gap: 1em;
+}
+.container__input--button{
+    border-radius: 1.5em;
+    padding: 1em;
+    font-size: 1em;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    border: 1px solid #0A3871;
+}
+.container__input--buttons > .container__input--button {
+    flex: 1;
+    flex-grow: 1;
+}
+.container__input--button:hover{
+    
+    background-color: #072B61;
+    color: #FFFFFF;
+    border: 1px solid #072B61;
+    cursor: pointer;
+}
+.container__input--button:active{
+    background-color: #356EA9;
+    color: #FFFFFF;
+    border: 1px solid #356EA9;
+}
+.Decrypt{
+    background-color: transparent;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+.Decrypt:hover{
+    background-color: #CED4DA;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.Decrypt:active{
+    background-color: #ADB5BD;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+.container__output{
+    width: 25vw;
+    margin-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    padding: 1em;
+}
+.container__output--img{
+    width: 75%;
+}
+.container__output--message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8em;
+}
+.container__output--warning{
+    color: #343A40;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em; 
+    max-width: 300px;
+}
+.container__output--p{
+    color: #495057;
+    text-align: center;
+    font-size: 1em;
+    max-width: 300px;
+}
+.container__output--invisibly{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+    width: 25vw;
+}
+.camouflage{
+    display: none;
+}
+.container__output--text{
+    word-wrap: break-word;
+    flex-grow: 1;
+    overflow-y: auto;
+    font-size: 1.2em;
+    color: #495057;
+}
+.footer{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width:768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container__input{
+        width: 100vw;
+    }
+    .container__input--textarea{
+        margin-left: 2.5%;
+        width: 90%;
+    }
+    .container__input--p{
+        margin-left: 2.5%;
+    }
+    .container__input--buttons{
+        margin-left: 2.5%;
+    }
+    .container__output{
+        margin: 2.5%;
+        padding: 2.5%;
+        width: 90%;
+        height: auto;
+    }
+    .container__output--img{
+        display: none;
+    }
+    .container__output--warning{
+        max-width: 600px;
+    }
+    .container__output--p{
+        max-width: 600px;
+    }
+    .container__output--invisibly{
+        width: 90%;
+    }
+    .footer{
+        display: none;
+    }
+}
+
+@media (max-width:425px){
+    .header{
+        height: 10vh;
+    }
+    .header__logo{
+        height: 32px;
+        padding: 2.5%;
+    }
+    .container__input--buttons{
+        flex-direction: column;
+    }
+}

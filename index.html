@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Encriptador de Texto</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="Img/Logo.png" alt="logo" class="header__logo  ">
+    </header>
+    <main class="container">
+      <section class="container__input">
+        <textarea class="container__input--textarea" id="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <p class="container__input--p">Solo letras minúsculas y sin acentos</p>
+        <div class="container__input--buttons">
+          <button class="container__input--button" onclick="botonEncriptar()">Encriptar</button>
+          <button class="container__input--button Decrypt" onclick="botonDesencriptar()">Desencriptar</button>
+        </div>
+      </section>
+      <section class="container__output">
+        <div class="container__output--message" id="message">
+          <img src="/Img/Muñeco.png" alt="Muñeco" class="container__output--img">
+          <p class="container__output--warning">Ningun mensaje fue encontrado</p>
+          <p class="container__output--p">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div class="container__output--invisibly camouflage" id="camouflage">
+          <p class="container__output--text" id="text"></p>
+          <button class="container__input--button Decrypt buttonCopy" onclick="copiar()">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">Hecho por Erick Joel Quispe Luna | ONE - Challenge</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
